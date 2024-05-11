@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     var element = document.getElementById("clicker");
     element.addEventListener("click", async function() {
+        console.log("hello!")
       try {
         const word = document.getElementById("def").value;
         const response = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + word);
@@ -19,4 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("name").innerHTML = "Error";
       }
     });
+    console.log("yo")
+    document.getElementById("codeprojects_pagefooter").parentNode.removeChild(document.getElementById("codeprojects_pagefooter"))
   });
