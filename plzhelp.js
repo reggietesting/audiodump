@@ -5,7 +5,7 @@ async function getDef(word){
     
     if (resp && resp[0]) {
        console.log(resp[0].meanings[0].definitions[0].definition);
-       document.getElementById("name").innerHTML = word
+       document.getElementById("name").innerHTML = resp[0].meanings[0].definitions[0].definition
     } else if (resp && resp.title) {
      document.getElementById("name").innerHTML = resp.title;
     } else {
