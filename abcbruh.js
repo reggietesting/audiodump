@@ -1,4 +1,5 @@
 async function getDef(word){
+    console.log("why??")
     const fet = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/"+word);
     const resp = await fet.json();
     console.log(resp);
@@ -12,5 +13,4 @@ async function getDef(word){
       document.getElementById("name").innerHTML = "err"
     }
   }
-  
   document.getElementById("clicker").addEventListener("click",getDef(document.getElementById("def").value))
